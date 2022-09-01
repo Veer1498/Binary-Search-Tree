@@ -1,6 +1,6 @@
 package binarySearchTree;
 /**
- * 
+ * Binary Search Tree Program
  * @author Veer.Singa
  *
  */
@@ -11,6 +11,7 @@ public class BinarySearchTree {
 	 * 
 	 */
 	Node root;
+	boolean flag = true;
 	
 	public void addNode(int data) {
 		/**
@@ -57,10 +58,31 @@ public class BinarySearchTree {
 		if(node.left != null) {
 			printTree(node.left);
 		}
-		System.out.println(node.data+" ");
+		System.out.print(node.data+" ");
 		if(node.right != null) {
 			printTree(node.right);
 		}
+	}
+	
+	//To Search Node Function
+	public void searchNode(Node node, int value) {
+		if(root == null) {
+			System.out.println("Tree is Empty");	
+			return;
+		}
+		else {
+			if(node.data == value) {
+				flag = true;
+				return;
+			}
+			if(flag == false && node.left != null) {
+				searchNode(node.left, value);
+			}
+			if(flag == false && node.right != null) {
+				searchNode(node.right, value);
+			}
+		}
+		
 	}
 
 }
