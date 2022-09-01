@@ -36,6 +36,7 @@ public class BinarySearchTree {
 			Node parent = root;
 			Node current = root;
 			while(current != null) {
+				parent = current;
 				if(node.data > current.data) {
 					current = current.right;
 				}
