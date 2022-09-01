@@ -1,6 +1,6 @@
 package binarySearchTree;
 /**
- * 
+ * Binary Search Tree Program
  * @author Veer.Singa
  *
  */
